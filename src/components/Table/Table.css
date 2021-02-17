@@ -1,0 +1,20 @@
+table {
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  padding: 0.5rem;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: rgb(149, 143, 143);
+}
+
+th[data-dir]:hover::after {
+  content: attr(data-symbol);
+}
+
+th[data-dir]:hover {
+  cursor: pointer;
+}

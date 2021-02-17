@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SearchBar from "../SearchBar/SearchBar";
+import "./Table.css"
 
 export default function Table({ employees, handleClick }) {
   const [filterQuery, setFilterQuery] = useState('');
