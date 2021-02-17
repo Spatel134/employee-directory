@@ -1,11 +1,7 @@
-import React from "react";
-
-const SearchBar = () => {
+export default function SearchBar({ handleInput }) {
   return (
-    <div>
-      <h2>Search Bar</h2>
-    </div>
+    <form className="py-1">
+      <input className="form-control" type="search" placeholder="Search" onInput={handleInput} />
+    </form>
   );
-};
-
-export default SearchBar;
+}
