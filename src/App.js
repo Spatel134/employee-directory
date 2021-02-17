@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";import Header from "./components/Header/Header"
+import { useState, useEffect } from "react";
+import Header from "./components/Header/Header";
 // import SearchBar from "./components/SearchBar/SearchBar"
-import Table from "./components/Table/Table"
-
+import Table from "./components/Table/Table";
 
 function App() {
   const [employees, setEmployees] = useState([]);
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div className="text-center">
-      <Header/>
+      <Header />
       <div className="container">
         <Table employees={employees} handleClick={handleClick} />
         {/* <SearchBar/> */}
@@ -55,5 +55,3 @@ function App() {
 }
 
 export default App;
-
-

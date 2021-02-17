@@ -1,16 +1,16 @@
-import { useState } from 'react';
+import { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
-import "./Table.css"
+import "./Table.css";
 
 export default function Table({ employees, handleClick }) {
-  const [filterQuery, setFilterQuery] = useState('');
+  const [filterQuery, setFilterQuery] = useState("");
 
   function handleInput(e) {
     const query = e.currentTarget.value.toLowerCase();
     setFilterQuery(query);
   }
 
-  const filteredEmployees = employees.filter(employee => {
+  const filteredEmployees = employees.filter((employee) => {
     const fullName = `${employee.name.first} ${employee.name.last}`.toLowerCase();
     return fullName.includes(filterQuery);
   });
@@ -45,12 +45,13 @@ export default function Table({ employees, handleClick }) {
                 e.currentTarget.setAttribute("data-symbol", direction === "1" ? "▼" : "▲");
                 handleClick("dob", direction);
               }}
-            >DOB</th>
+            >
+              DOB
+            </th>
           </tr>
         </thead>
         <tbody>
           {filteredEmployees.map((employee, i) => (
-        
             <tr key={i}>
               <td>
                 <img src={employee.picture.thumbnail} alt="Employee Picture." />
