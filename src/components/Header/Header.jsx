@@ -2,7 +2,10 @@ import React from "react";
 
 const Header = () => {
   return <div>
-          <h1>Header</h1>            
+          <header className="text-center py-1">
+        <h1>Employee Directory</h1>
+        <p>Click on Name or DOB to sort by column or use the search box to filter by first or last name.</p>
+      </header>         
   </div>;
 };
 
